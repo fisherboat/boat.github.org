@@ -1,29 +1,30 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2020-04-15 15:19:08 +0800
-categories: jekyll update
----
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+title:  "Gmail 邮件分类"
+date:   2020-05-05 15:19:08 +0800
+categories: 工作效率
 
-Jekyll requires blog post files to be named according to the following format:
+![Gmail](https://swallowdock.s3.amazonaws.com/uploads/production/picture/image/45/aa168776468d9dccedda0dd7d9003d98.jpg "Gmail")
+## 问什么要做邮件分类
 
-`YEAR-MONTH-DAY-title.MARKUP`
+1. 在工作中你很可能会收到很多不同种类的邮件，有很多未邮件的时候你可能会选择批量“已读”，这很可能会让你错过重要的邮件， 比如服务器重要报错邮件，老板重要的通知邮件(当然有些公司的有其他的方式通知)。这个时候如果预先把邮件进行分类，即使错过了，也很快在对应的分类中找回邮件。即你只要关注几个比较重要的分类就可以了。
+2. 工作邮箱和私人邮件在大多情况下是不同的, 把邮件聚合到一个邮箱是个明知的选择，这时用邮件分类的功能区分来源就不用每次都要去看收件人是那个邮箱了。
+3. 常用信用卡的人应该知道，信用卡公司每个月都会给发账单，你也可以用邮件分类功能把你的账单聚合起来，方便查看花销。
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+## Gmail 邮箱设置
+首先进入「设置」页面的「过滤器和屏蔽的地址」分页，将页面滚动到底部，点选「建立新筛选器」，然后就可以输入筛选规则。
 
-Jekyll also offers powerful support for code snippets:
+里面有发件人，收件人，主题， 包含字词和不包含，几种过滤条件，我自己用的最多的就是这几种。
+> 设置方式分两步
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+1. 在Notes 下面添加标签
+2. 创建“过滤器”并把过滤器内容放到标签里面(也就是关联起来)
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+做好这两步Gmail 会把符合过滤器的邮件放到标签下，同时你的收件箱还是会看到邮件，不会影响正常使用。
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+> 邮件客户端同步标签
+
+邮件客户端都有同步邮箱标签的功能，以我用的“Spark”为例，在左侧其他操作菜单，选择你的gmail账号，选择收藏就会回在左侧看到你所有的notes了
+
+你还可以对标签设置颜色，在收件箱中的邮件也会有对应颜色的标签。
+
