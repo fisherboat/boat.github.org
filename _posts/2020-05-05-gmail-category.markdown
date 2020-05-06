@@ -1,10 +1,11 @@
 ---
-layout: post
-title:  "Gmail 邮件分类"
-date:   2020-05-05 15:19:08 +0800
-categories: 工作效率
+layout: page
+title: Gmail 邮件分类
+date: 2020-05-05 15:19:08 +0800
+categories: 工作效率 最新
+summary: 你的 Gmail 只有拿来收信、发信而已吗？已经相当成熟的Gmail，除了免费提供的大容量、高成效的广告过滤系统外，还有很多贴心的设定功能，可以在收信的同时，一并做好邮件的分类，尽管一天有近百封邮件送达，只要能够做好前端的管理，就不怕永远有读不完的e-mail。可以很好的提高工作的效率！
+---
 
-![Gmail](https://swallowdock.s3.amazonaws.com/uploads/production/picture/image/45/aa168776468d9dccedda0dd7d9003d98.jpg "Gmail")
 ## 问什么要做邮件分类
 
 1. 在工作中你很可能会收到很多不同种类的邮件，有很多未邮件的时候你可能会选择批量“已读”，这很可能会让你错过重要的邮件， 比如服务器重要报错邮件，老板重要的通知邮件(当然有些公司的有其他的方式通知)。这个时候如果预先把邮件进行分类，即使错过了，也很快在对应的分类中找回邮件。即你只要关注几个比较重要的分类就可以了。
@@ -28,3 +29,4 @@ categories: 工作效率
 
 你还可以对标签设置颜色，在收件箱中的邮件也会有对应颜色的标签。
 
+[原文](https://yanzidock.com/articles/hCLRdBZM5th2WcurAoy8ww "原文")

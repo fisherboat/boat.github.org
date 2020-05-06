@@ -1,0 +1,104 @@
+---
+layout: post
+title: 搭建科学上网 —— V2ray
+date: 2020-05-06 15:19:08 +0800
+categories: 科学上网 最新
+summary: V2Ray(Project V) 相对于 Shadowsocks，V2Ray 更像全能选手，拥有更多可选择的协议 / 传输载体 (Socks、HTTP、TLS、TCP、mKCP、WebSocket )，还有强大的路由功能，不仅仅于此，它亦包含 Shadowsocks 组件，你只需要安装 V2Ray，你就可以使用所有的 V2Ray 相关的特性包括使用 Shadowsocks，由于 V2Ray 是使用 GO 语言所撰写的，天生的平台部署优势，下载即可使用，当然啦，由于 V2Ray 的配置相对来说是很繁琐的，毫无夸张的说，但是有 一键安装脚本 加持下，使用 V2Ray 便会显得轻松多了。
+---
+
+## 选择vps
+挑选vps尽量选择大厂，尽量多看看评测，购买尽量先买一个月试试，看效果再说。
+
+> 网络测试工具
+
+* [路由测试网站](https://www.ipip.net/ "路由测试网站")
+* [多节点延迟测试](http://ping.pe/ "多节点延迟测试")
+* [路由跟踪软件Best Trace](https://cdn.ipip.net/17mon/besttrace.exe "路由跟踪软件Best Trace")
+* [服务器测速代码脚本](https://www.v2rayssr.com/vpsspeed.html "服务器测速代码脚本")
+
+> vps 服务商
+
+* [Google clould](https://cloud.google.com/, "Google clould") (新账号有300刀赠送金可以使用一年)
+* [亚马逊aws](https://aws.amazon.com, "亚马逊aws") Lightsail
+* [微软azure](https://azure.microsoft.com/en-us/, "微软azure")
+* [搬瓦工](https://bandwagonhost.com/, "搬瓦工")
+* [Linode](https://www.linode.com/, "Linode")
+* [Vultr](https://www.vultr.com/, "Vultr")
+* [DigitalOcean](https://www.digitalocean.com/, "DigitalOcean")
+
+vps 服务器位置尽量离你近的，比如你在北方选择日本和韩国， 南方选择香港，台湾和新加坡。
+
+## 搭建代理
+目前比较流行的是v2ray和trojan, 支持v2ray的终端app比较多，我就用v2ray开始搭建代理。最好申请
+
+
+> vps 系统选择
+
+系统选择 Ubuntu 16+ / Debian 9+ / CentOS 7+
+
+> 域名设置
+
+* 购买域名(WebSocket + TLS 目前比较推荐用这种方式，不容易被墙， 域名最好在国外的网站注册购买域名)
+* 进入域名购买网站，设置域名A记录指向vps公网IP地址(可以是主域名也可以是子域名)
+
+> 登录vps工具
+
+ 准备ssh连接工具(windows 上可以用[putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/), Mac上用自带的终端就可以了, 怎么连接这里就不细聊了——自行google/百度)
+
+> 搭建v2ray代理
+
+进入vps 后切换到root用户，linux 的权限新手可能不了解
+
+在运行脚本之前确认是否安装 curl
+
+curl 安装命令
+
+```bash
+yum -y install curl # CentOS系统
+apt  install curl # Ubuntu 和 Debian 系统
+```
+v2ray 一键安装脚本
+```bash
+bash <(curl -s -L https://git.io/v2ray.sh)
+```
+v2ray 协议选择4: WebSocket + TLS
+
+域名填写配置的转发域名
+
+其他选项选择默认即可
+> v2ray 基本操作
+
+  *  查看 V2Ray 配置
+  *  修改 V2Ray 配置
+  *  下载 V2Ray 配置 / 生成配置信息链接 / 生成二维码链接
+  *  查看 Shadowsocks 配置 / 生成二维码链接
+  *  修改 Shadowsocks 配置
+  *  查看 MTProto 配置 / 修改 MTProto 配置
+  *  查看 Socks5 配置 / 修改 Socks5 配置
+  *  启动 / 停止 / 重启 / 查看日志
+  *  更新 V2Ray / 更新 V2Ray 管理脚本
+  *  卸载 V2Ray
+  *  其他
+
+> v2ray 加速
+
+BBR 是来自于 Google 的黑科技，目的是通过优化和控制 TCP 的拥塞，充分利用带宽并降低延迟，起到神奇般的加速效果。
+安装脚本
+```bash
+wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+```
+脚本下载完之后会进入安装和配置界面，先选择安装加速方式，安装后会提示是重启系统，再次进入系统后执行下面命令选择加速安装的加速方式(确保是root用户)
+```
+bash ~/tcp.sh
+```
+## 安装科学上网工具
+
+*  Windows|Linux: [v2ray](https://github.com/v2ray/v2ray-core/releases)
+* 苹果电脑: [Clashx](https://github.com/yichengchen/clashX/releases), [v2ray](https://github.com/v2ray/v2ray-core/releases)
+* Android: [V2rayNG](https://github.com/2dust/v2rayNG/releases), [BifrostV](https://v2raycn.com/download/BifrostV.apk)
+* Iphone : [Shadowrocket](https://www.v2rayssr.com/go?url=https://github.com/V2RaySSR/ios/releases/download/Shadowrocket/Shadowrocket-2.1.11.ipa)，[Quantumult](https://www.v2rayssr.com/go?url=https://github.com/V2RaySSR/ios/releases/download/Quantumult/Quantumult-2_2_11.ipa)
+
+用你安装的工具配置后就可以访问外网了。
+
+## 结束语
+到此为止科学上网工具已经配置完成，此教程旨在给需要用Google搜索内容的程序员提供，每个程序员都应该有一个不断学习的心。请注意科学上网，没意义并且和你没关系的是不要乱参与和制造。

@@ -1,0 +1,24 @@
+html, body {
+  height: 100%;
+}
+
+#main {
+  padding-top: 5rem;
+  min-height: calc(100% - 3.5rem);
+}
+
+article {
+  blockquote{
+    padding: 0.5rem;
+    background-color: #f7f7f7;
+    border-left: 6px solid #f0ad4e;
+    word-break: break-word!important;
+    word-break: break-all;
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    p {
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    }
+  }
+}

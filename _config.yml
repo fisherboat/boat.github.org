@@ -18,13 +18,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+permalink: /:categories/:title/
+
 title: Boat
 email: fisherbaot@gmail.com
 description: >-
   物来顺应，未来不迎，当时不杂，既过不恋
-baseurl: ""
-url: ""
+baseurl: "/"
+url: "http://fisherboat.github.io"
 github_username:  fisherboat
+
+highlighter: rouge
 
 # Build settings
 theme: minima
