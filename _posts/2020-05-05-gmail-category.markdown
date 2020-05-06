@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Gmail 邮件分类
 date: 2020-05-05 15:19:08 +0800
 categories: 工作效率 最新
